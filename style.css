@@ -1,0 +1,21 @@
+body{
+    background-color: #606060;
+}
+
+.logos{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+}
+.logo{
+    height: 100%;
+}
+
+.hero{
+    margin: 10px 0 0 0;
+}
+
+#timer{
+    font-size: 100px;
+}

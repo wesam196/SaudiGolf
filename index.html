@@ -1,0 +1,82 @@
+<html>
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+      
+    <link rel="stylesheet" href="style.css">
+      
+    <title>test2</title>
+          
+</head>    
+
+    
+<body>
+
+    <div class="container">
+        <div class="logos">
+            <div class="llogo col-4">
+                <img src="llogo.jpeg" class="img-fluid logo">
+            </div>
+            
+            <div class="rlogo col-4">
+                <img src="rlogo.png" class="img-fluid logo">
+            </div>
+        </div>
+        
+    <div class="hero">
+        <img class="img-fluid" src="hero.jpeg">
+    
+    </div>
+        
+    <div class="">
+        <h1 id="timer" class="text-center">15:00</h1>    
+    </div>
+        
+    </div>
+
+    
+    
+    
+    
+    <script>
+    
+    function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 * 15,
+        display = document.querySelector('#timer');
+    startTimer(fiveMinutes, display);
+};
+        
+
+        
+
+        
+        
+        
+    </script>
+    
+    
+    
+</body>    
+</html>
